@@ -1,3 +1,3 @@
 # ImprovFusion
 Upcoming Music Generation Application
-![logo](link)
+![logo](https://github.com/leo-step/ImprovFusion/blob/master/logo.png)
