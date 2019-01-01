@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Probability Graph Colors</title>
+  <style type="text/css" media="screen">
+  div {
+    width:140px;
+    height: 140px;
+    float: left;
+    margin: 1px;
+  }
+  </style>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://d3js.org/d3.v3.js"></script>
+
+  <script type="text/javascript">
+
+  var body = d3.select("body"),
+    length = 11,
+    color = d3.scale.ordinal().domain(['1','2','3','4','5','6','7','8','9','10']).range(['#5A0001','#2F6690','#ED254E','#E3B23C','#861388','#E2856E','#074F57','#7A28CB','#1B9AAA','#CB958E']);
+
+
+  for (var i = 1; i < length; i++) {
+    
+	div_el = body.append('div').attr('style', function (d) {
+      return 'background-color: ' + color(i);
+	  
+    }).append('h1').text( color(i)+ '\n Octave:'+i);
+
+  }
+  </script>
+
+</body>
+</html>
